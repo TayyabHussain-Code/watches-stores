@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+}
+.scrollbar-custom {
+  scrollbar-width: thin; 
+  scrollbar-color:#2d3541 #1a1a1d ; 
+}
+.scrollbar-custom::-webkit-scrollbar {
+  width: 5px;
+}
+
+.hide-scrollbar {
+  overflow-x: auto;
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; 
+}
+
+
+/* Add this to your global CSS (e.g. index.css or App.css) */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+.animate-fadeInOut {
+  animation: fadeInOut 1s ease-in-out;
+}
